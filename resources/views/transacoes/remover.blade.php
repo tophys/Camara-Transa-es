@@ -9,7 +9,7 @@
                   <form method="POST" action="{{ route('criar') }}" >
                     @csrf
                     <div class="form-group row">
-                      <label for="projeto" class="col-md-4 col-form-label text-md-right">Projeto</label>
+                      <label for="projeto" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Projeto</label>
                       <div class="col-md-6">
                       <select name='projeto' id="projeto" required class="form-control{{ $errors->has('projeto') ? ' is-invalid' : '' }}" autofocus>
                           <option value="" disabled selected>Selecione um Projeto</option>
@@ -28,19 +28,19 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                    <label for="competencia" class="col-md-4 col-form-label text-md-right">Competência</label>
+                    <label for="competencia" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Competência</label>
                       <div class="col-md-6">
                         <input id="competencia" type="date" class="form-control{{ $errors->has('competencia') ? ' is-invalid' : '' }}" name="competencia" value="{{Carbon\Carbon::today()->format('Y-m-d')}}" required/>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="data_execucao" class="col-md-4 col-form-label text-md-right">Data de Execução</label>
+                      <label for="data_execucao" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Data de Execução</label>
                       <div class="col-md-6">
                         <input id="data_execucao" type="date" class="form-control{{ $errors->has('data_execucao') ? ' is-invalid' : '' }}" name="data_execucao" value="{{Carbon\Carbon::today()->format('Y-m-d')}}" required/>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="grupo" class="col-md-4 col-form-label text-md-right">Grupo</label>
+                      <label for="grupo" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Grupo</label>
                       <div class="col-md-6">
                         <select name='grupo' required class="form-control{{ $errors->has('grupo') ? ' is-invalid' : '' }}">
                           <option value="" disabled selected>Selecione um Grupo</option>
@@ -79,19 +79,19 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="objetivo" class="col-md-4 col-form-label text-md-right">Objetivo</label>
+                      <label for="objetivo" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Objetivo</label>
                       <div class="col-md-6">
                         <input id="objetivo" type="text" class="form-control{{ $errors->has('objetivo') ? ' is-invalid' : '' }}" name="objetivo" value="{{ old('objetivo') }}" required/>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="fornecedor" class="col-md-4 col-form-label text-md-right">Fornecedor</label>
+                      <label for="fornecedor" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Fornecedor</label>
                       <div class="col-md-6">
                         <input id="fornecedor" type="text" class="form-control{{ $errors->has('fornecedor') ? ' is-invalid' : '' }}" name="fornecedor" value="{{ old('fornecedor') }}" required/>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="descricao" class="col-md-4 col-form-label text-md-right">Descrição</label>
+                      <label for="descricao" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Descrição</label>
                       <div class="col-md-6">
                         <select name='descricao' id="descricao" required class="form-control{{ $errors->has('descricao') ? ' is-invalid' : '' }}" autofocus>
                           <option value="" disabled selected>Selecione a Descrição</option>
@@ -105,7 +105,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="data_documento" class="col-md-4 col-form-label text-md-right">Data do Documento</label>
+                      <label for="data_documento" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Data do Documento</label>
                       <div class="col-md-6">
                         <input id="data_documento" type="date" class="form-control{{ $errors->has('data_documento') ? ' is-invalid' : '' }}" name="data_documento" value="{{Carbon\Carbon::today()->format('Y-m-d')}}" required/>
                       </div>
@@ -113,42 +113,42 @@
                     <div class="form-group row">
                       <label for="numero_cheque" class="col-md-4 col-form-label text-md-right">Número do Cheque</label>
                       <div class="col-md-6">
-                        <input id="numero_cheque" type="number" class="form-control{{ $errors->has('numero_cheque') ? ' is-invalid' : '' }}" name="numero_cheque" value="{{ old('numero_cheque') }}" required /> 
+                        <input id="numero_cheque" type="number" class="form-control{{ $errors->has('numero_cheque') ? ' is-invalid' : '' }}" name="numero_cheque" value="{{ old('numero_cheque') }}"  /> 
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="numero_ted" class="col-md-4 col-form-label text-md-right">Número do TED</label>
                       <div class="col-md-6">
-                        <input id="numero_ted" type="number" class="form-control{{ $errors->has('numero_ted') ? ' is-invalid' : '' }}" name="numero_ted" value="{{ old('numero_ted') }}" required /> 
+                        <input id="numero_ted" type="number" class="form-control{{ $errors->has('numero_ted') ? ' is-invalid' : '' }}" name="numero_ted" value="{{ old('numero_ted') }}"  /> 
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="numero_boleto" class="col-md-4 col-form-label text-md-right">Número do Boleto</label>
                       <div class="col-md-6">
-                        <input id="numero_boleto" type="number" class="form-control{{ $errors->has('numero_boleto') ? ' is-invalid' : '' }}" name="numero_boleto" value="{{ old('numero_boleto') }}" required /> 
+                        <input id="numero_boleto" type="number" class="form-control{{ $errors->has('numero_boleto') ? ' is-invalid' : '' }}" name="numero_boleto" value="{{ old('numero_boleto') }}"  /> 
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="numero_recibo" class="col-md-4 col-form-label text-md-right">Número do Recibo</label>
                       <div class="col-md-6">
-                        <input id="numero_recibo" type="number" class="form-control{{ $errors->has('numero_recibo') ? ' is-invalid' : '' }}" name="numero_recibo" value="{{ old('numero_recibo') }}" required /> 
+                        <input id="numero_recibo" type="number" class="form-control{{ $errors->has('numero_recibo') ? ' is-invalid' : '' }}" name="numero_recibo" value="{{ old('numero_recibo') }}"  /> 
                       </div>
                     </div>
                     <div class="form-group row">
                       <label for="numero_nota" class="col-md-4 col-form-label text-md-right">Número da Nota Fiscal</label>
                       <div class="col-md-6">
-                        <input id="numero_nota" type="number" class="form-control{{ $errors->has('numero_nota') ? ' is-invalid' : '' }}" name="numero_nota" value="{{ old('numero_nota') }}" required /> 
+                        <input id="numero_nota" type="number" class="form-control{{ $errors->has('numero_nota') ? ' is-invalid' : '' }}" name="numero_nota" value="{{ old('numero_nota') }}"  /> 
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="data_pagamento" class="col-md-4 col-form-label text-md-right">Data de Pagamento</label>
+                      <label for="data_pagamento" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Data de Pagamento</label>
                       <div class="col-md-6">
                         <input id="data_pagamento" type="date" class="form-control{{ $errors->has('data_pagamento') ? ' is-invalid' : '' }}" name="data_pagamento" value="{{Carbon\Carbon::today()->format('Y-m-d')}}" required/>
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label for="banco" class="col-md-4 col-form-label text-md-right">Banco</label>
+                      <label for="banco" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Banco</label>
                       <div class="col-md-6">
                         <select name='banco' id="banco" required class="form-control{{ $errors->has('banco') ? ' is-invalid' : '' }}" autofocus>
                           <option value="" disabled selected>Selecione um Banco</option>
@@ -167,7 +167,7 @@
                     <div class="form-group row">
                       <label for="conta" class="col-md-4 col-form-label text-md-right">Conta</label>
                       <div class="col-md-6">
-                        <select name='conta' id="conta" required class="subcat form-control{{ $errors->has('conta') ? ' is-invalid' : '' }}" autofocus>
+                        <select name='conta' id="conta" class="subcat form-control{{ $errors->has('conta') ? ' is-invalid' : '' }}" autofocus>
                           <option value="" disabled selected>Selecione uma Conta</option>
                           <optgroup label="CAIXA FEDERAL(Fomento Itaú)">
                            <option value="Agencia 0354, C/C 00002599-2" selected>Agencia 0354, C/C 00002599-2</option>
@@ -185,7 +185,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="valor_saida" class="col-md-4 col-form-label text-md-right">Valor Saída (R$)</label>
+                      <label for="valor_saida" class="col-md-4 col-form-label text-md-right"><font color="red">* </font>Valor Saída (R$)</label>
                       <div class="col-md-6">
                         <input id="valor_saida" type="number" min="0" step="0.01" class="form-control currency"  class="form-control{{ $errors->has('valor_saida') ? ' is-invalid' : '' }}" name="valor_saida" value="0.00" required/>
                       </div>
